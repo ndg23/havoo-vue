@@ -62,3 +62,8 @@ body {
   min-height: 100vh;
 
 }
+
+
+section {
+  font-family: 'Inter', sans-serif;
+}

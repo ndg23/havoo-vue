@@ -4,7 +4,7 @@ import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div id="app" class="w-full mx-auto container">
+  <div id="app" class="w-fll antialiased bg-gray-100 text-gray-600 min-h-screen mx-auto constainer">
     <RouterView />
   </div>
 </template>
