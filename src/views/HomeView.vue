@@ -38,18 +38,145 @@
     </header>
     <!-- Menu de filtre -->
     <div class="flex justify-center mt-5 space-x-4 mb-8">
-      <button
-        v-for="(category, index) in categories"
-        :key="index"
-        @click="filterTalents(category)"
-        :class="{
-          'bg-blue-500 text-white': activeFilter === category,
-          'bg-gray-200 text-gray-600': activeFilter !== category
-        }"
-        class="px-4 py-2 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
-      >
-        {{ category }}
-      </button>
+      <div class="overflow-x-auto">
+        <ul class="flex space-x-4">
+          <li class="flex-col text-center items-center justify-center">
+            <svg
+              class="text-center"
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+            <span class="text-xs text-gray-400 text-bases text-center">Ménages</span>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+          <li class="flex-col text-center justify-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+              <path
+                fill="#12e293"
+                d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2L9.19 8.63L2 9.24l5.46 4.73L5.82 21z"
+              />
+            </svg>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <!-- Boucle sur la liste des talents -->
@@ -57,7 +184,7 @@
       <div
         v-for="(talent, index) in talents"
         :key="index"
-        class="w-3/5 slg:max-w-md w-full bg-white my-2 bordesr flex rounded-lg shadosw-lg overflow-hidden"
+        class="md:w-3/5 w-full slg:max-w-md w-full bg-white my-2 bordesr flex rounded-lg shadosw-lg overflow-hidden"
       >
         <!-- Avatar -->
         <div class="bg-gray-200 h-44 w-1/3 flex items-center justify-center">
