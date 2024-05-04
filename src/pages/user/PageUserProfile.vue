@@ -49,17 +49,13 @@
       </div>
     </div>
 
-    <div class="grid grid-cols-2 w-full md:grid-cols-3 gap-2 p-4">
-      <div class="w-50 h-40 bg-blue-400 rounded-lg shadow-mds"></div>
-      <div class="w-50 h-40 bg-blue-400 rounded-lg shadow-mds"></div>
-      <div class="w-50 h-40 bg-blue-400 rounded-lg shadow-mds"></div>
-      <div class="w-50 h-40 bg-blue-400 rounded-lg shadow-mds"></div>
-      <div class="w-50 h-40 bg-blue-400 rounded-lg shadow-mds"></div>
-      <div class="w-50 h-40 bg-blue-400 rounded-lg shadow-mds"></div>
-      <div class="w-50 h-40 bg-blue-400 rounded-lg shadow-mds"></div>
-      <div class="w-50 h-40 bg-blue-400 rounded-lg shadow-mds"></div>
-      <div class="w-50 h-40 bg-blue-400 rounded-lg shadow-mds"></div>
-    </div>
+    <section id="photos" class="my-5 grid grid-cols-1 md:grid-cols-4 gap-4">
+      <template x-for="image in images" :key="image.id">
+        <a :href="image.largeImageURL" class="hover:opacity-75" target="_new"
+          ><img class="w-full h-64 object-cover" :src="image.largeImageURL" :alt="image.tags"
+        /></a>
+      </template>
+    </section>
   </div>
 </template>
 

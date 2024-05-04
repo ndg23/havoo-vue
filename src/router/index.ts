@@ -1,42 +1,62 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import NotFoundView from '@/views/NotFoundView.vue'
 import PageUserProfile from '../pages/user/PageUserProfile.vue'
+import PageUserSetting from '../pages/user/PageUserSetting.vue'
+import WidgetUserLayout from '../pages/user/widgets/WidgetUserLayout.vue'
+
 import PageAuthLogin from '../pages/auth/PageAuthLogin.vue'
 import PageAuthSignup from '../pages/auth/PageAuthSignup.vue'
-
+import AppLayout from '@/layouts/AppLayout.vue'
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
       name: 'home',
-      component: HomeView
+      component: AppLayout,
+      children: [
+        {
+          path: '',
+          name: 'home',
+          component: HomeView
+        },
+        {
+          path: '/user/:id',
+          name: 'user',
+          component: PageUserProfile
+        }
+      ]
     },
     {
-      path: '/user',
+      path: '/profile/:id',
       name: 'user',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: PageUserProfile
+      component: WidgetUserLayout,
+      children: [
+        {
+          path: '',
+          name: 'user-home',
+          component: PageUserSetting
+        }
+      ]
     },
     {
       path: '/login',
       name: 'login',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: PageAuthLogin
     },
     {
       path: '/register',
       name: 'register',
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
       component: PageAuthSignup
+    },
+    // Add the route for the 404 page
+    {
+      path: '/:catchAll(.*)',
+      name: 'not-found',
+      component: NotFoundView
     }
   ]
-})
+});
 
 export default router
