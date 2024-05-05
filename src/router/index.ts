@@ -15,18 +15,21 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: AppLayout,
-      children: [
-        {
-          path: '',
-          name: 'home',
-          component: HomeView
-        },
-        {
-          path: '/user/:id',
-          name: 'user',
-          component: PageUserProfile
-        }
-      ]
+      meta: {
+        layout: "AppLayout"
+      },
+      // children: [
+      //   {
+      //     path: '',
+      //     name: 'home-view',
+      //     component: HomeView
+      //   },
+      //   {
+      //     path: 'user/:id',
+      //     name: 'user',
+      //     component: PageUserProfile
+      //   }
+      // ]
     },
     {
       path: '/profile/:id',

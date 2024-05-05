@@ -1,7 +1,10 @@
-<template lang="">
-  <div></div>
+<template>
+  <div>
+    <TheTalentMenu />
+  </div>
 </template>
-<script>
+<script lang="ts">
+import TheTalentMenu from '@/components/TheTalentMenu.vue'
 export default {}
 </script>
 <style lang=""></style>

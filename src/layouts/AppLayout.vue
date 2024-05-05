@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="flex-col min-h-screen">
     <TheNavbar />
-    <RouterView />
+    <slot />
   </div>
 </template>
 <script lang="ts">
