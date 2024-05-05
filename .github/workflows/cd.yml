@@ -1,0 +1,14 @@
+name: Continuous Deployment
+on:
+  milestone:
+    types: [closed]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+- name: Create Release 🚀
+        uses: ridedott/release-me-action@master
+
+        with:
+          release-branches: '["main"]'
