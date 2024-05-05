@@ -1,13 +1,13 @@
-name: continuois deployment
-run-name: is learning GitHub Actions
-on: [push]
+name: Continuous Deployment
+on:
+  milestone:
+    types: [closed]
 jobs:
-  check-bats-version:
+  deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-      - run: npm install -g bats
-      - run: bats -v
+      - uses: actions/checkout@v2
+      - uses: ridedott/release-me-action@master
+
+      - with:
+          release-branches: '["main"]'
