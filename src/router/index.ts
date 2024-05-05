@@ -18,18 +18,7 @@ const router = createRouter({
       meta: {
         layout: "AppLayout"
       },
-      // children: [
-      //   {
-      //     path: '',
-      //     name: 'home-view',
-      //     component: HomeView
-      //   },
-      //   {
-      //     path: 'user/:id',
-      //     name: 'user',
-      //     component: PageUserProfile
-      //   }
-      // ]
+
     },
     {
       path: '/profile/:id',
